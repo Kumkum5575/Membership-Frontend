@@ -1,16 +1,65 @@
-# React + Vite
+# Invitation-Based Membership & Waiting List Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based platform designed to manage membership applications through an invitation-based registration system.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Public homepage accessible without login.
+* Invitation-based membership registration.
+* Secure authentication and role-based access.
+* Applicant dashboard to track application status.
+* Admin dashboard to manage applications.
+* Approve, reject, and review membership applications.
+* Invitation generation and usage limit management.
+* Invitation revocation and expiry handling.
+* Member suspension and reactivation.
+* Notifications for application status updates.
+* Audit logs for administrative activities.
+* Applicant privacy and protected routes.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* Vite
+* JavaScript
+* CSS
+* Axios
+* React Router DOM
+* Node.js and Express.js (Backend API)
+* MongoDB (Database)
 
-## Expanding the ESLint configuration
+## Installation and Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository.
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the frontend root directory:
+
+   ```env
+   VITE_API_URL=http://localhost:5000/api
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## Environment Variables
+
+| Variable     | Description          |
+| ------------ | -------------------- |
+| VITE_API_URL | Backend API base URL |
+
+## Backend
+
+The backend is maintained separately and provides authentication, invitation management, application processing, notifications, and administrative APIs.
+
+## Project Status
+
+Developed as part of a technical assessment.
