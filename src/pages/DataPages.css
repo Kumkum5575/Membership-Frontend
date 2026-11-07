@@ -33,3 +33,47 @@ td strong{color:#14213d}td small{display:block;color:#94a3b8;margin-top:5px;font
 .audit-dot{width:10px;height:10px;background:#2563eb;border-radius:50%;margin-top:4px;box-shadow:0 0 0 4px #eff6ff;flex-shrink:0}
 .audit-item strong{font-size:12px;color:#14213d;text-transform:capitalize}.audit-item p{font-size:12px;color:#64748b;margin:6px 0}.audit-item small{font-size:10px;color:#94a3b8}
 @media(max-width:600px){.data-page{padding:25px 14px}.data-card{padding:16px}.data-tools{flex-direction:column}.data-heading{align-items:flex-start;flex-direction:column}}
+/* APPLICATION SEARCH & FILTER RESPONSIVENESS */
+
+.data-tools {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.data-tools input,
+.data-tools select {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.data-tools input {
+    flex: 1;
+    width: 100%;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 600px) {
+    .data-tools {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .data-tools input,
+    .data-tools select {
+        width: 100%;
+        min-width: 0;
+        height: 48px;
+        padding: 0 14px;
+        font-size: 14px;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    .data-tools input {
+        flex: none;
+    }
+}
