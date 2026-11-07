@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --navy: #14213d;
+    --teal: #0f766e;
+    --background: #f8fafc;
+    --white: #fff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --warning: #d97706;
+    --radius: 12px;
+}
+
+/* GLOBAL RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection {
+    background: #dbeafe;
+    color: var(--navy);
+}
+
+/* WORKSPACE LAYOUT */
+
+.workspace-layout {
+    display: flex;
+    min-height: calc(100vh - 72px);
+    width: 100%;
+}
+
+/* MAIN CONTENT */
+
+.workspace-content {
+    flex: 1;
+    min-width: 0;
+    margin-left: 245px;
+
+    height: calc(100vh - 72px);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* CONTENT SCROLLBAR */
+
+.workspace-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.workspace-content::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.workspace-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.workspace-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 720px) {
+
+    .workspace-layout {
+        display: block;
+        min-height: auto;
+    }
+
+    .sidebar {
+        position: relative;
+        top: auto;
+        left: auto;
+
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        display: flex;
+        flex-direction: row;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        padding: 10px;
+    }
+
+    .sidebar-label,
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .side-link {
+        white-space: nowrap;
+        margin: 0;
+    }
+
+    .workspace-content {
+        width: 100%;
+        margin-left: 0;
+
+        height: auto;
+        min-height: calc(100vh - 72px);
+
+        overflow: visible;
+    }
+}

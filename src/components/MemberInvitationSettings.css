@@ -1,0 +1,188 @@
+.member-settings-panel {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.member-settings-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.member-settings-heading h2 {
+    margin: 0 0 7px;
+    color: #1f2937;
+    font-size: 22px;
+}
+
+.member-settings-heading p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.settings-refresh {
+    padding: 9px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.member-settings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.member-setting-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.member-setting-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.member-setting-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: #0369a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.member-setting-info h3 {
+    margin: 0 0 5px;
+    color: #1f2937;
+}
+
+.member-setting-info p {
+    margin: 0 0 6px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+.active-member-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #15803d;
+    background: #dcfce7;
+    padding: 4px 7px;
+    border-radius: 5px;
+}
+
+.member-setting-controls {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.permission-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #374151;
+    cursor: pointer;
+}
+
+.permission-toggle input {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.quota-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    color: #4b5563;
+}
+
+.quota-field input {
+    width: 85px;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.settings-save {
+    padding: 9px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.settings-save:hover {
+    background: #1d4ed8;
+}
+
+.settings-save:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.settings-success {
+    padding: 11px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background: #dcfce7;
+    color: #166534;
+}
+
+.settings-error {
+    padding: 11px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.settings-empty {
+    padding: 25px;
+    text-align: center;
+    color: #6b7280;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .member-setting-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .member-setting-controls {
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .member-settings-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
